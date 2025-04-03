@@ -5,7 +5,7 @@ import LoginForm from "./LoginForm";
 export default function Login() {
   return (
     <section
-      className="h-screen bg-cover bg-center flex items-center justify-center"
+      className="min-h-screen bg-cover bg-center flex items-center justify-center"
       style={{
         backgroundImage: `url(${BgImage})`,
       }}

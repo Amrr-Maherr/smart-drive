@@ -4,7 +4,7 @@ import RegisterForm from "../Authentication/RegisterForm";
 export default function Register() {
   return (
     <section
-      className="h-dvh bg-cover bg-center flex items-center justify-center"
+      className="min-h-screen bg-cover bg-center flex items-center justify-center"
       style={{
         backgroundImage: `url(${BgImage})`,
         backgroundSize: "cover",
