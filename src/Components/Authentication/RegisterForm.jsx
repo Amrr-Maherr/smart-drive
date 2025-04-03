@@ -33,13 +33,15 @@ export default function SignUpForm() {
       setLoading(true)
       try {
         const response = await axios.post(
-          import.meta.env.VITE_REGISTER_END_POITN,
+          import.meta.env.VITE_REGISTER_END_POINT,
           values
         );
         setLoading(false)
       }
       catch (error) {
         toast.error(error.response.data.msg);
+        console.log(error);
+        
          setLoading(false);
       }
     },
