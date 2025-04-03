@@ -153,7 +153,7 @@ export default function LoginForm() {
             ليس لديك حساب؟
           </span>
           <Link
-            to="/signup"
+            to="/"
             className="text-xs md:text-sm font-medium text-blue-400 hover:text-blue-300"
           >
             تسجيل جديد
