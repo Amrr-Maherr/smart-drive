@@ -1,5 +1,5 @@
 import React from "react";
-import BgImage from "../../assets/unsplash_1rBg5YSi00c.png";
+import BgImage from "../../assets/697.png";
 import RegisterForm from "../Authentication/RegisterForm";
 export default function Register() {
   return (
