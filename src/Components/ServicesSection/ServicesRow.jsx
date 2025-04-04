@@ -12,7 +12,7 @@ export default function ServicesRow() {
   ];
     return (
       <>
-        <div className="flex items-center justify-between flex-wrap">
+        <div className="flex items-center justify-center gap-10 flex-wrap">
           {ServicesData.map((item, index) => (
             <>
               <ServicesBox key={index} Data={item} />
