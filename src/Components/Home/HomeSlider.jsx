@@ -44,7 +44,7 @@ export default function HomeSlider() {
           // <-- تفعيل وإعدادات الـ Autoplay
           delay: 3000, // تغيير التأخير إلى 3000 مللي ثانية (3 ثوانٍ) أو حسب الرغبة
           disableOnInteraction: false, // يستمر التشغيل التلقائي حتى بعد تفاعل المستخدم
-          pauseOnMouseEnter: true, // يتوقف مؤقتًا عند مرور الماوس فوق السلايدر (اختياري ومستحسن)
+          pauseOnMouseEnter: false, // يتوقف مؤقتًا عند مرور الماوس فوق السلايدر (اختياري ومستحسن)
         }}
         modules={[Pagination, Autoplay]} // <-- تصحيح: إضافة Autoplay هنا
         className="mySwiper h-screen w-full"
