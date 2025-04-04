@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/autoplay"; // <-- من الأفضل استيراد CSS الخاص بالوحدة إذا كان متاحًا (للإصدارات الأحدث)
 
 // Import Images
 import SliderImageOne from "../../assets/image.png";
@@ -11,24 +12,24 @@ import SliderImageTwo from "../../assets/pexels-adrian-dorobantu-989175-2127733.
 import SliderImageThree from "../../assets/pexels-pixabay-164634.jpg";
 
 // import required modules
-import { Pagination } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules"; // <-- تصحيح: Autoplay بحرف A كبير
 
 export default function HomeSlider() {
   const SliderData = [
     {
       img: SliderImageOne,
       title: "Modern Car Showcase",
-      description: "قيادة أسهل، بيع أسرع كل شيء في مكان واحد!",
+      description: "قيادة أسهل، بيع أسرع\nكل شيء في مكان واحد!", // استخدم \n لفاصل الأسطر
     },
     {
       img: SliderImageTwo,
       title: "Scenic Mountain Drive",
-      description: "استكشف الطرق بثقة. الجودة التي يمكنك الاعتماد عليها.",
+      description: "استكشف الطرق بثقة.\nالجودة التي يمكنك الاعتماد عليها.", // استخدم \n لفاصل الأسطر
     },
     {
       img: SliderImageThree,
       title: "Classic Automobile",
-      description: "أناقة خالدة، أداء موثوق. امتلك قطعة من التاريخ.",
+      description: "أناقة خالدة، أداء موثوق.\nامتلك قطعة من التاريخ.", // استخدم \n لفاصل الأسطر
     },
   ];
 
@@ -39,30 +40,36 @@ export default function HomeSlider() {
           dynamicBullets: true,
           clickable: true,
         }}
-        modules={[Pagination]}
-        className="mySwiper h-screen w-full" // Full screen height/width
-        loop={true} // Optional: enable looping
-        // autoplay={{ delay: 4000, disableOnInteraction: false }} // Optional: enable autoplay
+        autoplay={{
+          // <-- تفعيل وإعدادات الـ Autoplay
+          delay: 3000, // تغيير التأخير إلى 3000 مللي ثانية (3 ثوانٍ) أو حسب الرغبة
+          disableOnInteraction: false, // يستمر التشغيل التلقائي حتى بعد تفاعل المستخدم
+          pauseOnMouseEnter: true, // يتوقف مؤقتًا عند مرور الماوس فوق السلايدر (اختياري ومستحسن)
+        }}
+        modules={[Pagination, Autoplay]} // <-- تصحيح: إضافة Autoplay هنا
+        className="mySwiper h-screen w-full"
+        loop={true}
       >
         {SliderData.map((slider, index) => (
           <SwiperSlide key={index} className="relative">
-            {" "}
-            {/* Slide is relative container */}
-            {/* Image filling the slide */}
             <img
               src={slider.img}
               alt={slider.title || `Slide ${index + 1}`}
-              className="w-full h-full object-cover" // Image covers slide
+              className="w-full h-full object-cover"
             />
-            {/* Centered content container */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-              {/* Text background container */}
-              <div className=" p-6 md:p-8  max-w-[90%] md:max-w-2xl">
-                <h2 className="text-white text-md md:text-3xl font-normal whitespace-pre-line">
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-center ">
+              {" "}
+              {/* إضافة خلفية شفافة للنص */}
+              <div className=" p-6 md:p-8 rounded-lg max-w-[90%] sm:max-w-[80%] md:max-w-2xl">
+                {" "}
+                {/* صندوق خلفية للنص */}
+                {/* تم إزالة العنوان بناءً على الكود الأصلي، يمكنك إضافته إذا أردت */}
+                {/* <h2 className="text-white text-3xl md:text-5xl font-bold mb-3">{slider.title}</h2> */}
+                <p className="text-white text-lg md:text-4xl font-normal whitespace-pre-line">
                   {" "}
-                  {/* Added whitespace-pre-line */}
+                  {/* تعديل حجم الخط قليلًا */}
                   {slider.description}
-                </h2>
+                </p>
               </div>
             </div>
           </SwiperSlide>
