@@ -1,4 +1,5 @@
 import CategoriesSection from "../Components/Categories/CategoriesSection";
+import Footer from "../Components/Footer/Footer";
 import HomeSlider from "../Components/Home/HomeSlider";
 import NavBar from "../Components/Nav/NavBar";
 import Services from "../Components/ServicesSection/Services";
@@ -11,7 +12,8 @@ export default function Home() {
         <HomeSlider/>
         <Services/>
         <CategoriesSection />
-        <SubscriptionsSection/>
+        <SubscriptionsSection />
+        <Footer/>
         </>
     )
 }

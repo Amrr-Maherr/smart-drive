@@ -17,7 +17,7 @@ export default function PackageCard() {
   return (
     <div
       dir="rtl"
-      className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md overflow-hidden p-6 m-4 flex flex-col justify-between hover:shadow-lg transition-shadow duration-300"
+      className="mx-auto max-w-sm bg-white rounded-lg border border-gray-200 shadow-md overflow-hidden p-6 m-4 flex flex-col justify-between hover:shadow-lg transition-shadow duration-300"
     >
       <div>
         <h2 className="text-[32px] font-bold text-black">{packageName}</h2>
