@@ -34,9 +34,9 @@ export default function LoginForm() {
         toast.success(response.data.msg || "تم تسجيل الدخول بنجاح!");
         if (response.data && response.data.data && response.data.data.token) {
           localStorage.setItem("authToken", response.data.data.token);
-          // setTimeout(() => {
-          //   navigate("/dashboard"); 
-          // }, 1000);
+          setTimeout(() => {
+            navigate("/home"); 
+          }, 1000);
         } else {
           console.warn(
             "لم يتم استقبال توكن المصادقة أو بيانات المستخدم من الـ API بشكل صحيح."

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AuthButton from "./AuthButton";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -6,6 +6,7 @@ import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import { useState } from "react";
 export default function SignUpForm() {
+  const navigate = useNavigate();
   const [loading,setLoading] = useState(false)
   const SignupSchema = Yup.object().shape({
     name: Yup.string().required("الاسم الكامل مطلوب"),
@@ -37,6 +38,9 @@ export default function SignUpForm() {
           values
         );
         setLoading(false)
+        setTimeout(() => {
+          navigate("/login");
+        }, 1000);
       }
       catch (error) {
         toast.error(error.response.data.msg);
