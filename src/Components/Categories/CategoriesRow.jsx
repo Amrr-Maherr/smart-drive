@@ -20,7 +20,7 @@ export default function CategoriesRow() {
   ];
   return (
     <>
-      <div className="container w-[90%] mx-auto flex items-center justify-between flex-col md:flex-row gap-6 py-8">
+      <div className="container w-[90%] mx-auto flex items-center justify-between flex-wrap py-8">
         {CategoriesData.map(
           (
             categoryItem
