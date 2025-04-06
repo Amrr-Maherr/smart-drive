@@ -4,7 +4,7 @@ export default function Banner() {
         <>
         <div>
             <figure className="h-[40dvh]">
-                <img src={Image} alt=""  className="h-full object-cover"/>
+                <img src={Image} alt=""  className="h-full"/>
             </figure>
         </div>
         </>
