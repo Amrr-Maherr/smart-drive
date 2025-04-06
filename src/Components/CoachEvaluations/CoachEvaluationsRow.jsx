@@ -37,7 +37,7 @@ export default function CoachEvaluationsRow() {
   return (
     <>
       {/* Adjust container width and centering as needed */}
-      <div className="flex items-start justify-center lg:justify-between w-[95%] lg:w-[85%] mx-auto flex-wrap gap-y-24 gap-x-4 pt-20 pb-10">
+      <div className="flex items-start justify-center lg:justify-between w-[95%]  mx-auto flex-wrap gap-y-24 gap-x-4 pt-20 pb-10">
         {evaluationsData.map((evaluation) => (
           <CoachEvaluationsBox key={evaluation.id} evaluation={evaluation} />
         ))}
