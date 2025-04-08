@@ -23,7 +23,7 @@ export default function NavBar() {
     },
     {
       title: "بيع سيارات",
-      link: "/cars-for-sale",
+      link: "/buy-car",
     },
     {
       title: "بيع اللوحات المميزه",
