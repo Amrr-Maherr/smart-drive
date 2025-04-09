@@ -2,6 +2,7 @@ import NavBar from "../../Nav/NavBar";
 import ServicesText from "../../ServicesSection/ServicesText";
 import Banner from "../Banner";
 import ToggleButtons from "../ToggleButtons";
+import SellForm from "./SellForm";
 
 export default function SellCar() {
   return (
@@ -11,7 +12,7 @@ export default function SellCar() {
         <Banner />
       </section>
       <div className="w-[95%] mx-auto">
-        <div className="my-[54px] flex-col md:flex-row gap-10 flex items-center justify-between">
+        <div className="mt-[54px] flex-col md:flex-row gap-10 flex items-center justify-between">
           <ToggleButtons />
           <ServicesText
             title="بيع سيارتك بسهولة"
@@ -20,7 +21,7 @@ export default function SellCar() {
           />
         </div>
         <div>
-          <h1>content </h1>
+          <SellForm/>
         </div>
       </div>
     </>
