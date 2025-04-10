@@ -3,13 +3,13 @@ import ServicesText from "../../ServicesSection/ServicesText";
 import Banner from "../Banner";
 import ToggleButtons from "../ToggleButtons";
 import SellForm from "./SellForm";
-
+import Image from "../../../assets/Untitled-1 1.png";
 export default function SellCar() {
   return (
     <>
       <NavBar />
       <section>
-        <Banner />
+        <Banner Image={Image} />
       </section>
       <div className="w-[95%] mx-auto">
         <div className="mt-[54px] flex-col md:flex-row gap-10 flex items-center justify-between">

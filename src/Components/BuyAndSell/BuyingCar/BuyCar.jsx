@@ -7,7 +7,7 @@ import useFetchCars from "../../../Hooks/useFetchCars";
 import { useEffect } from "react";
 import Loader from "../../Loader/Loader";
 import Filter from "./Filter";
-
+import Image from "../../../assets/Untitled-1 1.png";
 export default function BuyCar() {
   const carsData = [
     {
@@ -71,7 +71,7 @@ export default function BuyCar() {
     <>
       <NavBar />
       <section>
-        <Banner />
+        <Banner Image={Image} />
       </section>
       <div className="w-[95%] mx-auto">
         <div className="my-[54px] flex-col md:flex-row gap-10 flex items-center justify-between">

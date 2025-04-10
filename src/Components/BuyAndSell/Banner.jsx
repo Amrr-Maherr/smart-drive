@@ -1,5 +1,5 @@
-import Image from "../../assets/Untitled-1 1.png"
-export default function Banner() {
+
+export default function Banner({Image}) {
     return (
         <>
         <div>
