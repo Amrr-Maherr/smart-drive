@@ -5,7 +5,7 @@ import AuthButton from "../Authentication/AuthButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
-export default function NavBar() {
+export default function NavBar({color}) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const NavLinks = [
@@ -53,7 +53,7 @@ export default function NavBar() {
             {NavLinks.map((link, index) => (
               <li key={index}>
                 <Link
-                  className="text-lg font-medium hover:text-blue-400 transition-colors duration-200"
+                  className={`text-lg font-medium ${color} hover:text-blue-400 transition-colors duration-200`}
                   to={link.link}
                   onClick={() => setIsSidebarOpen(false)}
                 >
@@ -66,7 +66,7 @@ export default function NavBar() {
 
         <div className="flex items-center gap-4 md:gap-6">
           <AuthButton buttonText="اشتراك" />
-          <button className="text-sm md:text-base px-3 py-1 rounded hover:bg-gray-700 transition-colors duration-200">
+          <button className={`text-sm md:text-base px-3 py-1 rounded ${color} hover:bg-gray-700 transition-colors duration-200`}>
             دخول
           </button>
           <button

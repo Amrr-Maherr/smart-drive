@@ -42,7 +42,7 @@ export default function SellForm() {
     <div className="py-5 px-4">
       <form
         onSubmit={formik.handleSubmit}
-        className="w-full mx-auto p-6 text-end bg-white rounded-lg shadow space-y-5"
+        className="w-full mx-auto p-6 text-end bg-white rounded-lg shadow-lg space-y-5"
       >
         <div>
           <label

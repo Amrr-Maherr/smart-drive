@@ -1,12 +1,13 @@
+export default function Banner({ Image }) {
+  return (
+    <>
+      <div>
+        <figure className=" relative overflow-hidden">
+          <img src={Image} alt="" className="h-full w-full object-cover" />
 
-export default function Banner({Image}) {
-    return (
-        <>
-        <div>
-            <figure className="h-[40dvh]">
-                <img src={Image} alt=""  className="h-full"/>
-            </figure>
-        </div>
-        </>
-    )
+          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        </figure>
+      </div>
+    </>
+  );
 }

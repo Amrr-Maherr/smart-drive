@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import Loader from "../../Loader/Loader";
 import Filter from "./Filter";
 import Image from "../../../assets/Untitled-1 1.png";
+
 export default function BuyCar() {
   const carsData = [
     {
@@ -19,7 +20,7 @@ export default function BuyCar() {
       price: 1200000,
       condition: "available",
       carType: "sedan",
-      imageUrl: "https://example.com/images/audi-a4.jpg",
+      imageUrl: "https://i.pravatar.cc/150?img=12",
     },
     {
       id: 2,
@@ -30,7 +31,7 @@ export default function BuyCar() {
       price: 2500000,
       condition: "reserved",
       carType: "suv",
-      imageUrl: "https://example.com/images/bmw-x5.jpg",
+      imageUrl: "https://i.pravatar.cc/150?img=12",
     },
     {
       id: 3,
@@ -41,7 +42,7 @@ export default function BuyCar() {
       price: 450000,
       condition: "sold",
       carType: "suv",
-      imageUrl: "https://example.com/images/chery-tiggo7.jpg",
+      imageUrl: "https://i.pravatar.cc/150?img=12",
     },
     {
       id: 4,
@@ -52,7 +53,7 @@ export default function BuyCar() {
       price: 550000,
       condition: "available",
       carType: "sedan",
-      imageUrl: "https://example.com/images/chevrolet-malibu.jpg",
+      imageUrl: "https://i.pravatar.cc/150?img=12",
     },
     {
       id: 5,
@@ -63,13 +64,68 @@ export default function BuyCar() {
       price: 650000,
       condition: "available",
       carType: "hatchback",
-      imageUrl: "https://example.com/images/citroen-c4.jpg",
+      imageUrl: "https://i.pravatar.cc/150?img=12",
+    },
+    {
+      id: 1,
+      brand: "أودى",
+      model: "A4",
+      year: 2020,
+      mileage: 15000,
+      price: 1200000,
+      condition: "available",
+      carType: "sedan",
+      imageUrl: "https://i.pravatar.cc/150?img=12",
+    },
+    {
+      id: 2,
+      brand: "ب ام دبليو",
+      model: "X5",
+      year: 2019,
+      mileage: 45000,
+      price: 2500000,
+      condition: "reserved",
+      carType: "suv",
+      imageUrl: "https://i.pravatar.cc/150?img=12",
+    },
+    {
+      id: 3,
+      brand: "شيرى",
+      model: "Tiggo 7",
+      year: 2021,
+      mileage: 10000,
+      price: 450000,
+      condition: "sold",
+      carType: "suv",
+      imageUrl: "https://i.pravatar.cc/150?img=12",
+    },
+    {
+      id: 4,
+      brand: "شيفروليه",
+      model: "Malibu",
+      year: 2020,
+      mileage: 30000,
+      price: 550000,
+      condition: "available",
+      carType: "sedan",
+      imageUrl: "https://i.pravatar.cc/150?img=12",
+    },
+    {
+      id: 5,
+      brand: "ستروين",
+      model: "C4",
+      year: 2021,
+      mileage: 5000,
+      price: 650000,
+      condition: "available",
+      carType: "hatchback",
+      imageUrl: "https://i.pravatar.cc/150?img=12",
     },
   ];
 
   return (
     <>
-      <NavBar />
+      <NavBar/>
       <section>
         <Banner Image={Image} />
       </section>
