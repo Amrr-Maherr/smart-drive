@@ -37,7 +37,7 @@ export default function NavBar({color}) {
 
   return (
     <>
-      <nav className=" text-white flex items-center justify-between fixed top-0 z-50 w-full px-4 md:px-8 py-3 flex-row-reverse">
+      <nav className=" flex items-center justify-between fixed top-0 z-50 w-full px-4 md:px-8 py-3 flex-row-reverse bg-white">
         <div className="logo">
           <Link to="/home">
             <img
