@@ -1,6 +1,7 @@
 import React from "react"; // Import React
 import CoachEvaluationsBox from "./CoachEvaluationsCard"; 
 import ServicesText from "../ServicesSection/ServicesText"
+import { Link } from "react-router-dom";
 export default function CoachEvaluationsRow() {
   return (
     <>
@@ -10,9 +11,11 @@ export default function CoachEvaluationsRow() {
             title="تقييمات المدربين"
             text="اراء العملا فى كل مدربين القياده"
           />
-          <button className="p-[12px] border-[#1E3A8A] border rounded-lg">
-            اظهار الكل
-          </button>
+          <Link to="/trainers">
+            <button className="p-[12px] border-[#1E3A8A] border rounded-lg">
+              اظهار الكل
+            </button>
+          </Link>
         </div>
         <div className="flex items-start justify-center lg:justify-between  flex-wrap gap-y-24 gap-x-4  pb-10">
           <CoachEvaluationsBox />
