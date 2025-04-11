@@ -7,6 +7,7 @@ import BuyCar from "./Components/BuyAndSell/BuyingCar/BuyCar";
 import SellCar from "./Components/BuyAndSell/SellingCar/SellCar";
 import Trainers from "./Pages/Trainers";
 import SpecialPlates from "./Pages/SpecialPlates";
+import Profile from "./Pages/Profile";
 function App() {
   return (
     <Routes>
@@ -16,6 +17,7 @@ function App() {
       <Route path="/buy-car" element={<BuyCar />} />
       <Route path="/sell-car" element={<SellCar />} />
       <Route path="/trainers" element={<Trainers />} />
+      <Route path="/profile" element={<Profile />} />
       <Route path="/special-plates" element={<SpecialPlates />} />
     </Routes>
   );

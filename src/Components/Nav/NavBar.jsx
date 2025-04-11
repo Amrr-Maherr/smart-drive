@@ -71,7 +71,7 @@ export default function NavBar({color}) {
           </button>
           <button
             onClick={toggleSidebar}
-            className="md:hidden text-white focus:outline-none text-xl p-2 rounded hover:bg-gray-700"
+            className={`md:hidden  focus:outline-none text-xl p-2 rounded hover:bg-gray-700 ${color}`}
             aria-label="Toggle menu"
           >
             {isSidebarOpen ? (
