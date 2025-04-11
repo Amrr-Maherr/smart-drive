@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import Loader from "../../Loader/Loader";
 import Filter from "./Filter";
 import Image from "../../../assets/Untitled-1 1.png";
+import Footer from "../../Footer/Footer";
 
 export default function BuyCar() {
   const carsData = [
@@ -150,6 +151,7 @@ export default function BuyCar() {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 }

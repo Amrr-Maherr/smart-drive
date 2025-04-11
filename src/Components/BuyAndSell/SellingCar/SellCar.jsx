@@ -4,6 +4,7 @@ import Banner from "../Banner";
 import ToggleButtons from "../ToggleButtons";
 import SellForm from "./SellForm";
 import Image from "../../../assets/Untitled-1 1.png";
+import Footer from "../../Footer/Footer";
 export default function SellCar() {
   return (
     <>
@@ -23,6 +24,7 @@ export default function SellCar() {
           <SellForm/>
         </div>
       </div>
+      <Footer/>
     </>
   );
 }

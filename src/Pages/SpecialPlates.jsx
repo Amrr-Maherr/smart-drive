@@ -1,6 +1,6 @@
 import NavBar from "../Components/Nav/NavBar";
 import SpecialPlatesForm from "../Components/SpecialPlates/SpecialPlatesForm";
-
+import Footer from "../Components/Footer/Footer"
 export default function SpecialPlates() {
     return (
         <>
@@ -8,6 +8,7 @@ export default function SpecialPlates() {
         <section>
             <SpecialPlatesForm/>
         </section>
+        <Footer/>
         </>
     )
 }
