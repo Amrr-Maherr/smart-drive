@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import LogogImage from "../../assets/smart driver LOGO 1.svg";
 import AuthButton from "../Authentication/AuthButton";
@@ -7,7 +7,7 @@ import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 export default function NavBar({color}) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
+  const [token,setToken] = useState(localStorage.getItem("authToken") || null)
   const NavLinks = [
     {
       title: "الرئيسيه",
@@ -63,24 +63,44 @@ export default function NavBar({color}) {
             ))}
           </ul>
         </div>
-
-        <div className="flex items-center gap-4 md:gap-6">
-          <AuthButton buttonText="اشتراك" />
-          <button className={`text-sm md:text-base px-3 py-1 rounded ${color} hover:bg-gray-700 transition-colors duration-200`}>
-            دخول
-          </button>
-          <button
-            onClick={toggleSidebar}
-            className={`md:hidden  focus:outline-none text-xl p-2 rounded hover:bg-gray-700 ${color}`}
-            aria-label="Toggle menu"
-          >
-            {isSidebarOpen ? (
-              <FontAwesomeIcon icon={faXmark} />
-            ) : (
-              <FontAwesomeIcon icon={faBars} />
-            )}
-          </button>
-        </div>
+        <button
+          onClick={toggleSidebar}
+          className={`md:hidden  focus:outline-none text-xl p-2 rounded hover:bg-gray-700 ${color}`}
+          aria-label="Toggle menu"
+        >
+          {isSidebarOpen ? (
+            <FontAwesomeIcon icon={faXmark} />
+          ) : (
+            <FontAwesomeIcon icon={faBars} />
+          )}
+        </button>
+        {token ? (
+          <Link to="/profile">
+            <div class="relative w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
+              <svg
+                class="absolute w-12 h-12 text-gray-400 -left-1"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+          </Link>
+        ) : (
+          <div className="flex items-center gap-4 md:gap-6">
+            <AuthButton buttonText="اشتراك" />
+            <button
+              className={`text-sm md:text-base px-3 py-1 rounded ${color} hover:bg-gray-700 transition-colors duration-200`}
+            >
+              دخول
+            </button>
+          </div>
+        )}
       </nav>
 
       {isSidebarOpen && (
